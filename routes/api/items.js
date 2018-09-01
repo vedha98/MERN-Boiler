@@ -19,7 +19,8 @@ newItem.save().then(item => res.json(item));
 
 })
 router.delete('/',(req,res)=>{
-Item.findById(req.params.id).then(item=>{item.remove().then(()=>res.json({msg:"sucessfully removed!"}))}).catch(err=> res.status(404).json({msg:"not found"}))
+  console.log(req);
+Item.findById(req.query.id).then(item=>{item.remove().then(()=>res.json({msg:"sucessfully removed!"}))}).catch(err=> res.status(404).json({msg:"not found"}))
 })
 
 module.exports = router;

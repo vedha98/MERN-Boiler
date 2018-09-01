@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {Container , ListGroup , ListGroupItem , Button,Modal,ModalHeader,ModalBody,Form,FormGroup,Label,Input} from 'reactstrap';
 import {connect} from 'react-redux';
 import {addItem} from '../actions/itemActions';
-import uuid from 'uuid'
+
 class ItemModel extends React.Component{
   state = {
   modal:false,
@@ -19,7 +19,6 @@ onChange = (e)=>{
 onSubmit = e=>{
   e.preventDefault();
   const newItem={
-    id:uuid(),
     name:this.state.name
   }
   this.props.addItem(newItem);

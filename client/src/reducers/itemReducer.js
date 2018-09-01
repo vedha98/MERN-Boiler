@@ -16,7 +16,7 @@ switch (action.type) {
 case DELETE_ITEMS:
 return {
   ...state,
-  items:state.items.filter(item => item.id !== action.payload.id)
+  items:state.items.filter(item => item._id !== action.payload)
 };
 break;
 case ADD_ITEMS:

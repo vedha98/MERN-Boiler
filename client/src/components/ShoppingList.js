@@ -22,9 +22,9 @@ return (
 
 <ListGroup>
 <TransitionGroup className="Shopping-List">
-{items.map(({id,name})=>(
-<CSSTransition key={id} timeout={500} classNames="fade">
-  <ListGroupItem><Button className="remove-btn" color="danger" size="sm" onClick={this.deletebtnClick.bind(this,id)}>&times;</Button>{name}</ListGroupItem>
+{items.map(({_id,name})=>(
+<CSSTransition key={_id} timeout={500} classNames="fade">
+  <ListGroupItem><Button className="remove-btn" color="danger" size="sm" onClick={this.deletebtnClick.bind(this,_id)}>&times;</Button>{name}</ListGroupItem>
 
 </CSSTransition>
 
