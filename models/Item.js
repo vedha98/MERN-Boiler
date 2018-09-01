@@ -13,4 +13,4 @@ date:{
 
 
 });
-module.exports = Item = mongoose.model('item',ItemSchema);
+module.exports = Item = mongoose.model('Item',ItemSchema);
